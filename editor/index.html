@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>without bootstrap</title>
+    <script src="jquery.js"></script>
+    <link href="summernote-lite.css" rel="stylesheet">
+    <script src="summernote-lite.js"></script>
+        <style>
+            .container{
+                width: 80%;
+                
+            }
+        </style>
+  </head>
+  <a href="php/mostra.php"><button>Mostrar</button></a>
+  <body>
+    <div class="container" >
+        <form name="form01" action="php/inserir.php" method="POST">
+    <textarea id="summernote" name="editor"></textarea>
+    <input type="submit" value="enviar">
+        </form>
+</div>
+
+
+    <script>
+      $('#summernote').summernote({
+        placeholder: 'Digite o texto motivacional aqui',
+        tabsize: 2,
+        height: 320,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    </script>
+  </body>
+</html>

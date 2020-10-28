@@ -1,0 +1,126 @@
+
+.contato {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-contato {
+  width: 100%;
+  font-family: "Arial", Times, serif;
+}
+
+.campo-contato {
+  width: 100%;
+  color: #292929;
+  font-size: 18px;
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
+}
+
+.campo-contato-mensagem {
+  width: 100%;
+  color: #292929;
+  font-size: 18px;
+  resize:none;
+  overflow:hidden;
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 300px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
+  padding-top: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Arial", Times, serif;
+}
+.campo-contato-mensagem:focus{
+	box-shadow:0 0 0;
+	outline:0;
+}
+
+.botao-contato {
+  width: 100%;
+  font-size: 18px;
+  border-radius: 4px;
+  color: #fff;
+  height: 40px;
+  opacity: .8;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: #009688;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #500707;
+  border-right: 1px solid #500707;
+  transition: 1s;
+}
+
+.botao-contato:hover {
+  opacity: 1;
+}
+.label-contato{
+font-size:20px;
+font-weight:bold;
+color:#009688;
+
+}
+
+#divBusca{
+  background-color:#2F4F4F;
+  border:solid 1px;
+  border-radius:15px;
+  width:300px;
+}
+ 
+#txtBusca{
+  float:right;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:1px solid;
+  height:32px;
+  width:260px;
+}
+.filtro-de-tabela{
+  width: 260px;
+  height: 30px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: #3871bd;
+  font-weight: bold;
+  text-align:center;
+  border-top: none;
+  border-right: none;
+  border-bottom: 3px solid red;
+  border-left: none;
+  box-shadow: 0 0 0 0;
+    outline: 0;
+
+}
+.button-modal {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

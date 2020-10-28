@@ -1,0 +1,62 @@
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #printable, #printable * {
+      visibility: visible;
+     
+    }
+    
+  }
+  
+  @page{
+    size: auto;
+    margin: 0mm;
+  }
+  #printable h1{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:13px;
+  }
+  #printable b{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:20px;
+  }
+  #printable img{
+  border-radius:100%;
+  }
+  .botao{
+      color:white;
+      background-color: rgb(9, 204, 9);
+      border:none;
+      width:200px;
+      height:30px;
+      cursor:pointer;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  #printable p{
+      font-weight: bold;
+      font-size:20px;
+      font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  textarea.notebook {
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        width: 100%;
+        padding: 5px 0px;
+        margin-bottom: 20px;
+        resize:vertical;
+        font-size: 20px;
+        line-height: 24px;
+          border:none;
+         -webkit-appearance: none;
+        border-radius: 0;
+        background: url(notebook.png);
+        height:770px;
+        resize:none;
+          
+  }
+  textarea.notebook:focus{
+  box-shadow: 0 0 0 0;
+      outline: 0;
+  }

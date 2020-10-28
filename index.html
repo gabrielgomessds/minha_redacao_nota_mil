@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="icon" type="icon" href="img/icone/icone_pagina_inicial.png">
+    <style>
+        .ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #FFF;
+  border: 1px solid #1abc9c;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  background-color:#1abc9c;
+  font-size:16px;
+}
+.ghost-button:hover {
+  background-color: #fff;
+  text-decoration:none;
+  color: #000;
+}
+.form-contact {
+  width: 100%;
+  font-family: "Arial", Times, serif;
+}
+
+.form-contact-input {
+  width: 50%;
+  color: #292929;
+  font-size: 18px;
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
+}
+
+.form-contact-textarea {
+  width: 50%;
+  color: #292929;
+  font-size: 18px;
+  resize: none;
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 200px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
+  padding-top: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Arial", Times, serif;
+}
+
+.form-contact-button {
+  width: 50%;
+  font-size: 18px;
+  border-radius: 4px;
+  color: #fff;
+  height: 40px;
+  opacity: .8;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: #B22222;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #500707;
+  border-right: 1px solid #500707;
+  transition: 1s;
+}
+
+.form-contact-button:hover {
+  opacity: 1;
+}
+
+.icon {
+  padding: 10px;
+  color: black;
+  min-width: 25px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  left: 87%;
+}
+/* body,a,a:hover,a:visited,a:active {
+
+  cursor: url('img/icone/canetaa.cur'), default;
+
+}
+ */
+
+        </style>
+    <title>Minha Redação</title>
+
+    <!-- Codigo bootstrap aqui -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Codigo css para customizar o site -->
+	 <link href="css/style-pages.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+	
+
+    <!-- Customiza as fontes do site -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+		function verificaaluno(){
+		if(document.getElementById('senha').value != document.getElementById('confirma').value){
+		erro.innerHTML = '<b>Sehas diferentes!<b>';
+		return false;
+		}else{
+		erro.innerHTML = '';
+		return true;
+		}
+		}
+
+        </script>
+
+        <script>
+            function verificaprof(){
+            if(document.getElementById('senhaprof').value != document.getElementById('confirmaprof').value){
+            erroprof.innerHTML = '<b>Sehas diferentes!<b>';
+            return false;
+            }else{
+            erro.innerHTML = '';
+            return true;
+            }
+            }
+    
+            </script>
+	<script>
+ var loadFileAluno = function(event) {
+    var output1 = document.getElementById('outputAluno');
+    output1.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+        <script>
+
+            var loadFileProfessor = function(event) {
+               var output2 = document.getElementById('outputProfessor');
+               output2.src = URL.createObjectURL(event.target.files[0]);
+             };
+           </script>
+
+
+
+
+           <script>
+             function mostrarSenha(){
+              var senhaAluno = document.getElementById("senha");
+              var confirmaAluno = document.getElementById("confirma");
+              if(senhaAluno.type == 'password'){
+                senhaAluno.type = 'text';
+                confirmaAluno.type = 'text';
+                document.getElementById('icone_ver_aluno').className = "fa fa-eye icon";
+              }else{
+                senhaAluno.type = 'password';
+                confirmaAluno.type = 'password';
+                
+                document.getElementById('icone_ver_aluno').className = "fa fa-eye-slash icon";
+              }
+             }
+             </script>
+              <script>
+                function mostrarSenhaProf(){
+                 var senhaProf = document.getElementById("senhaprof");
+                 var confirmaProf = document.getElementById("confirmaprof");
+                 if(senhaProf.type == 'password'){
+                  senhaProf.type = 'text';
+                  confirmaProf.type = 'text';
+                  document.getElementById('icone_ver_prof').className = "fa fa-eye icon";
+                 }else{
+                  senhaProf.type = 'password';
+                  confirmaProf.type = 'password';
+                 
+                  document.getElementById('icone_ver_prof').className = "fa fa-eye-slash icon";
+                 }
+                }
+                </script>
+	</head>
+
+<body>
+
+    <!-- Menu de navegação -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >Menu de navegação</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >Inicio</a>
+            </li>
+			<li>
+                <a href="#login" onclick = $("#menu-close").click(); >Login</a>
+            </li>
+			<li>
+                <a href="#cadastroa" onclick = $("#menu-close").click(); >Cadastro de Aluno</a>
+            </li>
+            <li>
+                <a href="#cadastrop" onclick = $("#menu-close").click(); >Cadastro de Professor</a>
+            </li>
+            <li>
+              <a href="#contato" onclick = $("#menu-close").click(); >Contato</a>
+          </li>
+         
+        </ul>
+    </nav>
+	
+
+    <!-- Cabeça do site  -->
+    <header id="top" class="header" style="background: url(img/inicio/inicial.jpg) no-repeat center center scroll;">
+        <div class="text-vertical-center">
+           <img src="img/icone/icone_pagina_inicial.png" width="100px" height="100px">
+            <!--<img src="img/icone/icone_pagina_inicial.png" width="100px" height="100px">--->
+			
+      <h1 style="color:#1abc9c;font-family:Embassy BT;"><i>Minha Redação</i></h1>
+      <h2 style="color:#1abc9c;font-weight:bold;">Seja bem vindo(a).</h2>
+            <br>
+        </div>
+    </header>
+	    
+    <!-- Campo de login -->
+	<section id="login" class="login" style="background-color:gold;">
+        <div class="container">
+            <div class="row">
+           
+				<div class="form-cadastro">
+                    <form id="form" action="php/login.php" method="post">
+    <h3>Login<img src="img/icone/icone_login.png" width="30px" height="30px"></h3>
+    <fieldset>
+      <input placeholder="Endereço de email" name="email-login" type="email"  required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Senha" name="senha-login" type="password"  required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" name="btn_login" id="contact-submit">LOGIN</button>
+    </fieldset>
+    <!--<center><b style="color:red;text-decoreiton:none;" align="center"><a href="recuperar_senha/recuperar_senha.php">Esqueci minha senha</a></b></center><br>-->
+
+  </form>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    
+    <section id="cadastroa" class="cadastro" style="background-color:#1abc9c;">
+        <div class="container">
+            <div class="row">
+                <div class="form-cadastro">
+    <form id="form" action="php/cadastro_aluno.php" method="post" onsubmit="return verificaaluno()" enctype="multipart/form-data">
+    <h3 align="center">Cadastro do Aluno<img src="img/icone/icone_aluno.png" width="45px" height="45px"></h3>
+    <fieldset>
+      <input placeholder="Nome completo" name="nome" type="text"  required >
+    </fieldset>
+    <fieldset>
+      <input placeholder="Endereço de email" name="email" type="email"  required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Código turma" name="codigo_acesso" type="text"  required>
+    </fieldset>
+    <fieldset>
+      <select class="select" name="sexo" required>
+          <option value="">Escolha o sexo....</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Outro">Outro</option>
+          <option value="Não quero informar">Não quero informar</option>
+         
+        </select>
+     </fieldset>
+	<fieldset >
+    <i class="fa fa-eye-slash icon" id="icone_ver_aluno" title="Mostrar Senha" onclick="mostrarSenha();"></i>
+      <input placeholder="A senha tem que ser maior que 6 digitos" name="senha" type="password" id="senha" class="senha" required>
+    </fieldset>
+    
+   <fieldset>
+     <input placeholder="Digite a senha novamente" type="password" id="confirma" name="confirma" required>
+     <center> <p style="font-size:18px;"><font color="red" id="erro"></font></p></center>
+    </fieldset>
+	<fieldset >
+        <label>Foto:</label>
+     <label class="labelInput" >
+    <input type="file" accept="image/*"  id="foto" name="foto" onchange="loadFileAluno(event)"/>
+    <span><img src="img/icone/icone_usuario.png" title="Escolha uma imagem" name="foto" id="outputAluno" style="width:240px;height:190px;cursor:pointer;" ></span>
+</label>
+    </fieldset>
+    <input type="text" value="aluno" style="display:none;" name="tipo">
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit">Cadastrar</button>
+    </fieldset>
+  </form>
+					
+                </div>
+				 			
+  
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Portfolio -->
+    <section id="cadastrop" class="cadastro" style="background-color:salmon;">
+        <div class="container">
+            <div class="row">
+                <div class="form-cadastro">
+    <form id="form" action="php/cadastro_professor.php" method="post" onsubmit="return verificaprof()" enctype="multipart/form-data">
+    <h3 align="center">Cadastro do Professor<img src="img/icone/icone_professor_cadastro.png" width="45px" height="45px"></h3>
+    <fieldset>
+      <input placeholder="Nome completo" name="nome" type="text"  required >
+    </fieldset>
+    <fieldset>
+      <input placeholder="Endereço de email" name="email" type="email"  required>
+    </fieldset>
+    <fieldset>
+        <input placeholder="Escola ou entidade onde trabalha" name="escola" type="text"  required>
+      </fieldset>
+      <fieldset>
+        <select class="select" name="sexo" required>
+            <option value="">Escolha o sexo....</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+            <option value="Não quero informar">Não quero informar</option>
+           
+          </select>
+       </fieldset>
+	<fieldset>
+    <i class="fa fa-eye-slash icon" id="icone_ver_prof" title="Mostrar Senha" onclick="mostrarSenhaProf();"></i>
+      <input placeholder="A senha tem que ser maior que 6 digitos" name="senha" type="password" id="senhaprof"  required>
+    </fieldset>
+    <fieldset>
+        <input placeholder="Digite novamente" type="password" id="confirmaprof" name="confirmaprof" required>
+        <center> <p style="font-size:18px;"><font color="red" id="erroprof"></font></p></center>
+       </fieldset>
+	<fieldset >
+        <label>Foto:</label>
+     <label class="labelInput">
+    <input type="file" accept="image/*"  id="foto" name="foto" onchange="loadFileProfessor(event)"/>
+    <span><img src="img/icone/icone_usuario.png" title="Escolha uma imagem" name="foto" id="outputProfessor" style="width:240px;height:190px;cursor:pointer;" ></span>
+</label>
+    </fieldset>
+    <input type="text" value="professor" style="display:none;" name="tipo">
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit">Cadastrar</button>
+    </fieldset>
+  </form>
+					
+                </div>
+				 			
+  
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+     <!-- Portfolio -->
+     <section id="contato" class="cadastro" style="background-color:#836FFF;">
+        <div class="container">
+            <div class="row">
+                    <div class="container">
+                        <center>
+                        <h1 style="color:white;font-weight: bold;">Fale Conosco <img src="img/icone/fale_conosco.png" width="60px" height="60px"></h1>
+                        <form action="php/envio_contato.php" class="form-contact" method="post" tabindex="1">
+                          <input type="text" class="form-contact-input" name="nome_contato" placeholder="Nome" required />
+                          <input type="email" class="form-contact-input" name="email_contato" placeholder="Email" required />
+                          <textarea class="form-contact-textarea" name="mensagem_contato" placeholder="Deixe uma mensagem" required></textarea>
+                          <button type="submit" class="form-contact-button">Enviar <img src="img/icone/menu/enviar.png"></button>
+                        </center>
+                        </form>
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Footer -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong><img src="img/icone/img_home.png" width="100px" height="100px"></strong>
+                    <h4><strong>Minha Redação</strong>
+                    </h4>
+                    <br>
+                    <p style="font-size: 16px;">Para informações do criador clique <a href="criador/info.html" class="link-rodape"><b>AQUI</b></a></p>
+                    <br>
+                    <p class="text-muted">Gomess Productions | Todos os direitos reservados - 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>
