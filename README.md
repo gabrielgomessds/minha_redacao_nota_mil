@@ -20,6 +20,7 @@ ajudando os alunos e os professores nesse momento dificil. Como sitado antes foi
   <li>JAVASCRIPT</li>
   <li>JQUERY</li>
   <li>CHARTJS</li>
+  <li>PHP 5.6</li>
 </ol>
 
 <h3>:wrench: Funcionalidades: </h3>
@@ -35,7 +36,7 @@ ajudando os alunos e os professores nesse momento dificil. Como sitado antes foi
 
 <h3>:dart: Como usar:</h3>
 <ol>
-  <li>Ter instalado PHP 7.2</li>
+  <li>Ter instalado PHP 5.6</li>
   <li>Ter o xampp ou qualquer servidor local</li>
   <li>Rode o arquivo banco_de_dados.sql no seu banco</li>
 </ol>
